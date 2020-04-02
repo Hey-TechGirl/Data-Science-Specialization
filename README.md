@@ -1,12 +1,12 @@
 Data-Science-Specialization
 ======================
 
-Coursera Data Science Specialization
-Programming Assignments of Coursera.com online course: Data-Science-Specialization
+Coursera Data Science Specialization<br />
+Programming Assignments of Coursera.com online course: Data-Science-Specialization<br />
 There are 10 Courses in this Specialization
 
 #### 1. The Data Scientist’s Toolbox
-This is a four-week course. <br />
+>> This is a four-week course. <br />
 Done in Mar 30th - Apr 10th, 2020.
 
 #### 2. R Programming
