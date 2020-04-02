@@ -1,4 +1,6 @@
 # Data-Science-Specialization
+======================
+
 Coursera Data Science Specialization
 Programming Assignments of Coursera.com online course: Data-Science-Specialization
 There are 10 Courses in this Specialization
