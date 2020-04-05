@@ -1,0 +1,322 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Introduction Air Pollution Project},
+  pdfauthor={R Programming},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Introduction Air Pollution Project}
+\author{R Programming}
+\date{4/5/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+For this first programming assignment you will write three functions
+that are meant to interact with dataset that accompanies this
+assignment. The dataset is contained in a zip file \textbf{specdata.zip}
+that you can download from the Coursera web site.
+
+\textbf{Although this is a programming assignment, you will be assessed
+using a separate quiz.}
+
+\hypertarget{data}{%
+\subsection{Data}\label{data}}
+
+The zip file containing the data can be downloaded here:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://d396qusza40orc.cloudfront.net/rprog\%2Fdata\%2Fspecdata.zip}{specdata.zip}
+  {[}2.4MB{]}
+\end{itemize}
+
+The zip file contains 332 comma-separated-value (CSV) files containing
+pollution monitoring data for fine particulate matter (PM) air pollution
+at 332 locations in the United States. Each file contains data from a
+single monitor and the ID number for each monitor is contained in the
+file name. For example, data for monitor 200 is contained in the file
+``200.csv''. Each file contains three variables:
+
+\begin{itemize}
+\tightlist
+\item
+  Date: the date of the observation in YYYY-MM-DD format
+  (year-month-day)
+\item
+  sulfate: the level of sulfate PM in the air on that date (measured in
+  micrograms per cubic meter)
+\item
+  nitrate: the level of nitrate PM in the air on that date (measured in
+  micrograms per cubic meter)
+\end{itemize}
+
+For this programming assignment you will need to unzip this file and
+create the directory `specdata'. Once you have unzipped the zip file, do
+not make any modifications to the files in the `specdata' directory. In
+each file you'll notice that there are many days where either sulfate or
+nitrate (or both) are missing (coded as NA). This is common with air
+pollution monitoring data in the United States.
+
+\hypertarget{part-1}{%
+\subsection{Part 1}\label{part-1}}
+
+Write a function named `pollutantmean' that calculates the mean of a
+pollutant (sulfate or nitrate) across a specified list of monitors. The
+function `pollutantmean' takes three arguments: `directory',
+`pollutant', and `id'. Given a vector monitor ID numbers,
+`pollutantmean' reads that monitors' particulate matter data from the
+directory specified in the `directory' argument and returns the mean of
+the pollutant across all of the monitors, ignoring any missing values
+coded as NA. A prototype of the function is as follows
+
+\includegraphics{https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/AniR5o00EeWk4wrqfRkIMQ_26d94fc4f878a8b60240f6fda6e17f6c_Screen-Shot-2015-11-17-at-9.03.29-AM.png?expiry=1586217600000\&hmac=BMZ3R3HotIprqN36DsE94hqtTQu96HJ0_FBqvgdjuPg}
+
+You can see some example output from this function below. The function
+that you write should be able to match this output. Please save your
+code to a file named pollutantmean.R.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(R.version.string)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "R version 3.6.3 (2020-02-29)"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#source("pollutantmean.R")}
+\CommentTok{#pollutantmean("specdata", "sulfate", 1:10)}
+\CommentTok{## [1] 4.064128}
+
+\CommentTok{#pollutantmean("specdata", "nitrate", 70:72)}
+\CommentTok{## [1] 1.706047}
+
+\CommentTok{#pollutantmean("specdata", "nitrate", 23)}
+\CommentTok{## [1] 1.280833}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-2}{%
+\subsection{Part 2}\label{part-2}}
+
+Write a function that reads a directory full of files and reports the
+number of completely observed cases in each data file. The function
+should return a data frame where the first column is the name of the
+file and the second column is the number of complete cases. A prototype
+of this function follows
+
+\includegraphics{https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/Jnt5oY00EeWisRLkE7o57Q_2713e281672695ec59b29f83ec95f7b1_Screen-Shot-2015-11-17-at-9.04.23-AM.png?expiry=1586217600000\&hmac=uRWo8dDQxDhaijugcGME_kQ25y0CVF5uyFrm_iBn1FU}
+
+You can see some example output from this function below. The function
+that you write should be able to match this output. Please save your
+code to a file named complete.R. To run the submit script for this part,
+make sure your working directory has the file complete.R in it.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#source("complete.R")}
+\CommentTok{#complete("specdata", 1)}
+\CommentTok{##   id nobs}
+\CommentTok{## 1  1  117}
+
+\CommentTok{#complete("specdata", c(2, 4, 8, 10, 12))}
+\CommentTok{##   id nobs}
+\CommentTok{## 1  2 1041}
+\CommentTok{## 2  4  474}
+\CommentTok{## 3  8  192}
+\CommentTok{## 4 10  148}
+\CommentTok{## 5 12   96}
+
+\CommentTok{#complete("specdata", 30:25)}
+\CommentTok{##   id nobs}
+\CommentTok{## 1 30  932}
+\CommentTok{## 2 29  711}
+\CommentTok{## 3 28  475}
+\CommentTok{## 4 27  338}
+\CommentTok{## 5 26  586}
+\CommentTok{## 6 25  463}
+
+\CommentTok{#complete("specdata", 3)}
+\CommentTok{##   id nobs}
+\CommentTok{## 1  3  243}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{part-3}{%
+\subsection{Part 3}\label{part-3}}
+
+Write a function that takes a directory of data files and a threshold
+for complete cases and calculates the correlation between sulfate and
+nitrate for monitor locations where the number of completely observed
+cases (on all variables) is greater than the threshold. The function
+should return a vector of correlations for the monitors that meet the
+threshold requirement. If no monitors meet the threshold requirement,
+then the function should return a numeric vector of length 0. A
+prototype of this function follows
+
+\includegraphics{https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/OXaiR400EeWk4wrqfRkIMQ_dafbb49ef127335cf1f9468fcadbd4ee_Screen-Shot-2015-11-17-at-9.05.01-AM.png?expiry=1586217600000\&hmac=bLudh6IeD3jtQV3B7X44G6Pv2ZUO7A7oBClbxeoCO_w}
+
+For this function you will need to use the `cor' function in R which
+calculates the correlation between two vectors. Please read the help
+page for this function via `?cor' and make sure that you know how to use
+it.
+
+You can see some example output from this function below. The function
+that you write should be able to approximately match this output.
+\textbf{Note that because of how R rounds and presents floating point
+numbers, the output you generate may differ slightly from the example
+output.} Please save your code to a file named corr.R. To run the submit
+script for this part, make sure your working directory has the file
+corr.R in it.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{print}\NormalTok{(R.version.string)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "R version 3.6.3 (2020-02-29)"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#source("corr.R")}
+\CommentTok{#source("complete.R")}
+\CommentTok{#cr <- corr("specdata", 150)}
+\CommentTok{#head(cr)}
+\CommentTok{## [1] -0.01895754 -0.14051254 -0.04389737 -0.06815956 -0.12350667 -0.07588814}
+
+\CommentTok{#summary(cr)}
+\CommentTok{##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. }
+\CommentTok{## -0.21057 -0.04999  0.09463  0.12525  0.26844  0.76313}
+
+\CommentTok{#cr <- corr("specdata", 400)}
+\CommentTok{#head(cr)}
+\CommentTok{## [1] -0.01895754 -0.04389737 -0.06815956 -0.07588814  0.76312884 -0.15782860}
+
+\CommentTok{#summary(cr)}
+\CommentTok{##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. }
+\CommentTok{## -0.17623 -0.03109  0.10021  0.13969  0.26849  0.76313}
+
+\CommentTok{#cr <- corr("specdata", 5000)}
+\CommentTok{#summary(cr)}
+\CommentTok{##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. }
+
+\CommentTok{#length(cr)}
+\CommentTok{## [1] 0}
+
+\CommentTok{#cr <- corr("specdata")}
+\CommentTok{#summary(cr)}
+\CommentTok{##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. }
+\CommentTok{## -1.00000 -0.05282  0.10718  0.13684  0.27831  1.00000}
+
+\CommentTok{#length(cr)}
+\CommentTok{## [1] 323}
+\end{Highlighting}
+\end{Shaded}
+
+\end{document}
