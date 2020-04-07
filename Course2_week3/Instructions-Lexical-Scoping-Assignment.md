@@ -1,10 +1,6 @@
----
-title: "Lexical Scoping Assignment"
+# Lexical Scoping Assignment
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Instructions
 
