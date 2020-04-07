@@ -1,6 +1,4 @@
 # Lexical Scoping Assignment
----
-
 
 ## Instructions
 
