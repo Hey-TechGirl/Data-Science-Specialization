@@ -97,10 +97,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv
 
 using the fread() command load the data into an R object
 
-DT
+    DT
 Which of the following is the fastest way to calculate the average value of the variable
-
-pwgtp15
+    
+    pwgtp15
 broken down by sex using the data.table package?
 
 ```{r}
